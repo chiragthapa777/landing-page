@@ -1,0 +1,458 @@
+/* imports */
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&family=Varela+Round&display=swap");
+
+/* 
+font-family: 'Lobster', cursive;
+font-family: 'Poppins', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Varela Round', sans-serif;
+*/
+/* varible */
+:root {
+  --bg-dim: #f8f9fa;
+  --color-primary: #9d4edd;
+  --text-gary: #777777;
+}
+
+/*global class */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+  /* font-family: 'Roboto', sans-serif;    */
+}
+a,
+li,
+ul {
+  text-decoration: none;
+  color: inherit;
+  list-style: none;
+}
+input,
+textarea {
+  border: none;
+  resize: none;
+}
+input,
+textarea:focus {
+  outline: none;
+}
+.button {
+  display: inline-block;
+  padding: 7px 40px;
+  background-color: var(--color-primary);
+  border-radius: 30px;
+  font-weight: 600px;
+  color: white;
+  box-shadow: 1px 1px 5px 0px rgba(69,69,69,0.75);
+  transition: .35s;
+}
+.btn-opp{
+    background-color: white;
+    color: var(--color-primary);
+}
+.button:hover{
+    box-shadow: 1px 1px 10px 0px rgba(69,69,69,0.75);
+    cursor: pointer;
+    transform: scale(1.03);
+}
+.bigText {
+    font-size: 60px;
+    font-weight: 900;
+    line-height: 60px;
+    font-family: 'Varela Round', sans-serif;
+}
+.contentText {
+    font-size: 16px;
+    font-weight: 250;
+}
+.smallText {
+    color: var(--color-primary);
+
+}
+.bc-dim {
+  background-color: var(--bg-dim);
+  z-index: -10;
+}
+
+/* navbar============================================== */
+.navbar {
+height: 80px;
+  top: 0;
+  position: absolute;
+  /* border: 1px solid black; */
+  width: 100%;
+  padding: 0px 150px;
+  display: flex;
+  z-index: 9999;
+}
+#toggle{
+    display:none;
+}
+.navbar label{
+
+    margin: auto 20px;
+}
+#menuBar{
+    cursor: pointer;
+    display: none;
+    color: var(--color-primary);
+    font-size: 30px;
+}
+.logo {
+  font-family: "Varela Round", sans-serif;
+  font-weight: 600;
+  font-size: 36px;
+  color: var(--color-primary);
+  margin: auto 0px;
+  margin-right: 40px;
+}
+.navBox {
+  width: 100%;
+  margin: auto 0px;
+  display: flex;
+  justify-content: space-between;
+}
+.navLinks {
+margin-top: 10px;
+  width: 370px;
+  display: flex;
+  justify-content: space-between;
+}
+.navLinks li a {
+  padding: 5px 10px;
+  font-weight: 430;
+  font-size: 16px;
+  border-radius: 20px;
+  transition: 0.35s;
+}
+.navLinks li a:hover {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+
+/* backgound============================================== */
+.navback {
+ padding: 0px 150px;
+  height: 90vh;
+  padding-top: 200px;
+  display: flex;
+  justify-content: space-between;
+}
+.heroLeft{
+    width: 50%;
+}
+.heroText{
+    width: 80%;
+}
+.heroContent{
+    width: 90%;
+    margin-top: 20px;
+}
+.buttonList{
+    margin-top: 20px;
+}
+.buttonList div{
+    margin-right:20px ;
+}
+.heroRight{
+
+}
+.heroRight img{
+        height: 400px;
+}
+/* about======================================================= */
+.about{
+    display:flex ;
+    justify-content: space-between;
+    padding: 0px 150px;
+    padding-bottom: 70px;
+    margin-top: 30px;    
+}
+.aboutLeft{
+    margin-top: 70px;
+}
+.aboutHead{
+    margin-top: 20px;
+}
+.aboutContent{
+    width: 80%;
+    margin-top: 20px;
+}
+.aboutCmt{
+    width: 90%;
+    margin-top: 20px;
+    display: flex;
+}
+.cmtImg{
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    margin: auto 0px;
+    margin-right: 20px;
+    object-fit: cover;
+}
+.aboutRight{
+
+}
+.aboutPicBack{
+    position: relative;
+}
+.backColor {
+    position: absolute;
+    background-color: var(--color-primary);
+    height: 420px;
+    width: 350px;
+    border-radius: 80px;
+    transform: rotate(10deg);
+    top: 80px;
+    left: 125px;
+}
+.aboutPic{
+    margin-top: 140px;
+    height: 300px;
+    width: 600px;
+    object-fit: cover;
+    border-radius: 100px;
+    display: block;
+    position: relative;
+    z-index: 100;
+}
+
+/* pricing=============================================== */
+.price{
+
+}
+.priceTop{
+    margin-top: 70px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.priceHead{
+    font-size: 35px;
+    font-weight: 600;
+}
+.priceCards{
+    width: 100%;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+}
+.priceCard{
+    width: 250px;
+    padding: 50px 15px;
+    margin: auto 20px;
+    border-radius: 30px;
+    box-shadow: 1px 1px 10px 0px rgba(189, 189, 189, 0.75);
+    text-align: center;
+}
+.pcName{
+    font-size: 30px;
+    font-weight: 300;
+}
+.pcPrice{
+    color: var(--color-primary);
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+.pcText{
+    font-size: 14px;
+    font-weight: 200;
+    
+    margin-bottom: 30px;
+}
+.pcText ul li{
+    list-style: outside;
+    text-align: left;
+    margin-left: 17px;
+}
+.priceCard:hover{
+    cursor: pointer;
+    box-shadow: 1px 1px 30px 0px rgba(145, 145, 145, 0.75);
+}
+.pcActive{
+    box-shadow: 1px 1px 30px 0px rgba(145, 145, 145, 0.75);
+}
+/* contactus============================================== */
+.contactHead{
+    font-size: 35px;
+    font-weight: 600;
+    text-align: center;
+    padding-top: 40px;
+}
+.contactBox{
+    display: flex;
+    padding: 30px 150px;
+}
+.contactForm{
+}
+.contactInput, .contactTextarea{
+    display: block;
+    width: 800px;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 15px;
+    border: 1px solid rgb(233, 232, 232);
+    color: rgb(105, 105, 105);
+    font-size: 16px;
+    margin-right: 80px;
+}
+.input-btn{
+    margin: 20px 0px;
+}
+.contactRight{
+    margin: 0px auto;
+    margin-top: 40px;
+}
+.crInfo p{
+    margin-top: 10px;
+}
+.crInfo p span{
+    color: var(--color-primary);
+}
+.crMap{
+    margin-top: 10px;
+    height: 250px;
+    width: 400px;
+    border: 1px solid var(--color-primary);
+    object-fit: cover;
+}
+/* footer=========================================================== */
+.bottomBar{
+    background-color: #EFEFEF;
+}
+.bottomContent{
+    color: #777777;
+    display: flex;
+    padding: 50px 150px;
+}
+.bottomLeft{
+    margin-right: 30px;
+    flex: 6;
+}
+.bottomRight {
+    flex: 4;
+    width: 100%;
+    display: block;
+}
+.footer{
+    font-size: 14px;
+    color: var(--color-primary);
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+/* ========================================= */
+.navFix{
+    position: fixed;
+    height: 70px;
+    background-color: white;
+    box-shadow: 1px 1px 30px 0px rgba(145, 145, 145, 0.75);
+}
+
+/* tablet */
+@media (max-width: 1450px) {
+    .navbar{
+        padding: 0px 50px;
+    }
+    .navback{
+        padding: 0px 50px;
+        padding-top: 200px;
+    }
+    .about{
+        padding: 0px 50px;
+        padding-bottom: 70px;
+    }
+    .cmtImg{
+        height: 50px;
+        width: 50px;
+    }
+    .aboutPic{
+        margin-top: 140px;
+        height: 230px;
+        width: 500px;
+    }
+    .backColor {
+        height: 320px;
+        width: 250px;
+        top: 90px;
+        left: 125px;
+    }
+    .button {
+        padding: 5px 30px;
+        border-radius: 25px;
+        font-weight: 500px;
+    
+      }
+      .bigText {
+          font-size: 50px;
+          font-weight: 800;
+          line-height: 50px;
+      }
+      .contentText {
+          font-size: 14px;
+          font-weight: 250;
+      }
+      .smallText {
+          font-size: 13px;
+      }
+      .contactBox{
+        padding: 30px 50px;
+    }
+    .crMap{
+        height: 230px;
+        width: 350px;
+ 
+    }
+    .contactInput, .contactTextarea{
+        width: 600px;
+    }
+    
+}
+@media (max-width: 1090px) {
+    #menuBar{
+        position: relative;
+        display: block;
+        z-index: 9999;
+
+    }
+    .crMap{
+        height: 200px;
+        width: 300px;
+    }
+    .navbar{
+        justify-content: space-between;
+    }
+    .contactInput, .contactTextarea{
+        margin-right: 10px;
+    }
+    .navBox{
+        display: none;
+        padding: 70px 10px;
+        justify-content: flex-start;
+        position: fixed;
+        right: 0;
+        background-color: #ffffff;
+        height: 100Vh;
+        flex-direction: column;
+        width: 200px;
+        overflow: hidden;
+        transition: .5s;
+    }
+    .navLinks{
+        flex-direction: column;
+    }
+}
+.showNav{
+    display: block;
+}
