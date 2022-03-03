@@ -2,6 +2,7 @@ let nav = document.getElementById("navbar");
 
 var scrollPrev = window.pageYOffset;
 window.onscroll = function () {
+  document.getElementById("toggle").checked = false;
   if (window.pageYOffset === 0) {
     nav.classList.remove("navFix");
   } else {
@@ -17,15 +18,3 @@ window.onscroll = function () {
  let navBox=document.getElementById("navBox")
  let toggle=document.getElementById("toggle")
  
- toggle.addEventListener("click",()=>{
-     console.log("click");
-     
-    if(navBox.classList.contains("showNav"))
-    {
-        navBox.classList.remove("showNar")
-    }
-    else{
-        navBox.classList.add("showNar")
-    }
-     
- })

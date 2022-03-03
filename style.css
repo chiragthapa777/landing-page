@@ -139,7 +139,7 @@ margin-top: 10px;
 /* backgound============================================== */
 .navback {
  padding: 0px 150px;
-  height: 90vh;
+  min-height: 600px;
   padding-top: 200px;
   display: flex;
   justify-content: space-between;
@@ -293,8 +293,6 @@ margin-top: 10px;
     display: flex;
     padding: 30px 150px;
 }
-.contactForm{
-}
 .contactInput, .contactTextarea{
     display: block;
     width: 800px;
@@ -392,7 +390,6 @@ margin-top: 10px;
         padding: 5px 30px;
         border-radius: 25px;
         font-weight: 500px;
-    
       }
       .bigText {
           font-size: 50px;
@@ -414,8 +411,13 @@ margin-top: 10px;
         width: 350px;
  
     }
+    .contactForm{
+        text-align: center;
+    }
     .contactInput, .contactTextarea{
+        padding: 12px;
         width: 600px;
+        margin: 10px auto;
     }
     
 }
@@ -425,6 +427,9 @@ margin-top: 10px;
         display: block;
         z-index: 9999;
 
+    }
+    .logo{
+        font-size: 32px;
     }
     .crMap{
         height: 200px;
@@ -437,22 +442,71 @@ margin-top: 10px;
         margin-right: 10px;
     }
     .navBox{
-        display: none;
-        padding: 70px 10px;
         justify-content: flex-start;
         position: fixed;
-        right: 0;
-        background-color: #ffffff;
+        right: 0px;
         height: 100Vh;
         flex-direction: column;
-        width: 200px;
+        width: 0;
         overflow: hidden;
         transition: .5s;
+        background-color: red;
     }
     .navLinks{
         flex-direction: column;
     }
+    #toggle:checked ~ .navBox{
+        padding: 70px 10px;
+        width: 200px;
+    }
+    .navRight{
+        margin-left: 35px;
+        margin-top: 20px;
+    }
+    .navback{
+        flex-direction: column;
+    }
+    .heroLeft{
+        width: 100%;
+        margin: 0px au;
+    }
+    .heroContent{
+        width: 100%;
+    }
+    .heroRight{
+        text-align: center;
+    }
+
+    .about{
+        flex-direction: column;
+    }
+    .priceCards{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .priceCard{
+        margin: 15px auto;
+    }
+    .contactInput, .contactTextarea{
+        margin: 10px auto;
+    }
+    .contactBox{
+        flex-direction: column;
+    }
+    .bottomContent{
+        flex-direction: column;
+    }
 }
-.showNav{
-    display: block;
+@media (max-width: 650px) {
+    .contactInput, .contactTextarea{
+        width: 100%;
+    }
+    .aboutPic{
+        width: 100%;
+    }
+    .aboutPicBack{
+        width: 100%;
+        left: -40px;
+    }
 }
